@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Conjecture</title>
+    <style>
+        * {
+    color-scheme: dark; 
+    font-family: monospace;
+}
+
+canvas {
+    cursor: crosshair;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Collatz Conjecture</h1>
+    <p>The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined as follows: start with any positive integer n. Then each term is obtained from the previous term as follows: if the previous term is even, the next term is one half of the previous term. If the previous term is odd, the next term is 3 times the previous term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.</p>
+    <details open>
+        <summary>steps</summary>
+        <ul>
+            <li>1. start with any positive integer and store in n</li>
+            <li>2. if n is even, then divide by 2</li>
+            <li>3. if n is odd, then multiply by 3 and add 1</li>
+            <li>4. repeat until n is 1</li>
+        </ul>
+    </details>
+    <hr>
+    <form>
+        <label for="number">number (default is random 1-10)</label>
+        <input type="number" name="n" value="327">
+        <input type="submit" value="Calculate!">
+        <details>
+            <summary>numbers to try</summary>
+            <ul>
+                <li><a href="?n=66">66</a></li>
+                <li><a href="?n=327">327</a></li>
+                <li><a href="?n=77671">77671</a></li>
+                <li><a href="?n=113383">113383</a></li>
+                <li><a href="?n=3732423">3732423</a></li>
+            </ul>
+        </details>
+    </form>
+    <details open>
+        <summary>calculation information</summary>
+        <ul>
+            <li>Collatz: 3n+1</li>
+            <li>start: <a id="start"></a></li>
+            <li>size: <a id="size"></a></li>
+            <li>odds: <a id="odds"></a></li>
+            <li>evens: <a id="evens"></a></li>
+            <li>biggest: <a id="biggest"></a></li>
+        </ul>
+    </details>
+    <hr>
+    <canvas id="chart"></canvas>
+    <hr>
+    <p>made by <a href="https://github.com/y0geshx">yogesh</a></p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
